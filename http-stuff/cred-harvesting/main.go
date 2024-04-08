@@ -32,15 +32,6 @@ func login(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	//	fh, err := os.OpenFile("credentials.txt", os.O_CREATE|os.O_APPEND|os.O_WRONLY, 0600)
-	//	if err != nil {
-	//		panic(err)
-	//	}
-	//
-	//	defer fh.Close()
-	//
-	//	log.SetOutput(fh)
-	//
 	mux := http.NewServeMux()
 
 	mux.HandleFunc("POST /login", login)
